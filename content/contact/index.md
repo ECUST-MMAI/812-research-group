@@ -7,7 +7,7 @@ type: landing
 sections:
   - block: contact
     content:
-      title: Contact
+      title: Contact 联系我们
       text: |-
         Welcome to visit! If you need to contact our laboratory, welcome to East China University of Science and Technology in Shanghai, we will sincerely accept you. You can also contact Prof. Yu Zhu or other members of the laboratory by email. Good Luck!
 
