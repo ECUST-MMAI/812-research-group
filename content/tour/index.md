@@ -8,7 +8,7 @@ sections:
   - block: slider
     content:
       slides:
-      - title: '欢迎到访Ecust-MMAI实验室！'
+      - title: '欢迎到访Ecust-MMAI（多模态人工智能）实验室！'
         content: '👋 与志同道合的朋友们开启多彩研究生生活 👋'
         align: center
         background:
