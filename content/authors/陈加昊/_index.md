@@ -56,7 +56,7 @@ social:
 email: 'chen20103509@163.com'
 
 user_groups:
-  - Master Students
+  - Master Students 硕士
 
 enrollment_year: 2023
 ---

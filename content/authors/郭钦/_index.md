@@ -59,7 +59,7 @@ social:
 email: 'Y10250156@mail.ecust.edu.cn'
 
 user_groups:
-  - Doctoral Students
+  - Doctoral Students 博士
 
 enrollment_year: 2025
 ---

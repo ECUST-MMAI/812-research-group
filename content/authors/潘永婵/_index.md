@@ -63,7 +63,7 @@ social:
 email: 'Kiwis.kc@gmail.com'
 
 user_groups:
-  - Grad Students
+  - Graduates Students 毕业生
 
 enrollment_year: 2019
 ---

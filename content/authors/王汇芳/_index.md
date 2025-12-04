@@ -56,7 +56,7 @@ social:
 email: '2256175795@qq.com'
 
 user_groups:
-  - Master Students
+  - Master Students 硕士
 
 enrollment_year: 2022
 ---

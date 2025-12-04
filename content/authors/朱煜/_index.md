@@ -63,7 +63,7 @@ social:
 email: 'zhuyu@ecust.edu.cn'
 
 user_groups:
-  - Academic Leaders
+  - Professor 教授
 
 enrollment_year: 2008
 ---

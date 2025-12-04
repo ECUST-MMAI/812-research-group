@@ -55,7 +55,7 @@ social:
 email: '1458727102@qq.com'
 
 user_groups:
-  - Grad Students
+  - Graduates Students 毕业生
 
 enrollment_year: 2020
 ---

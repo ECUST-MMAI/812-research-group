@@ -11,11 +11,10 @@ sections:
       # Choose which groups/teams of users to display.
       #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
       user_groups:
-          - Academic Leaders
-          - Doctoral Students
-          - Master Students
-          - Grad Students
-          - Administration
+          - Professor 教授
+          - Doctoral Students 博士
+          - Master Students 硕士
+          - Graduates Students 毕业生
       sort_by: Params.enrollment_year
       sort_ascending: true
     design:

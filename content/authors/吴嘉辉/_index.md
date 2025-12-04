@@ -59,7 +59,7 @@ social:
 email: '691053438@qq.com'
 
 user_groups:
-  - Grad Students
+  - Graduates Students 毕业生
 
 enrollment_year: 2021
 ---
