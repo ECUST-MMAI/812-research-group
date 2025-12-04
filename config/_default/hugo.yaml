@@ -3,7 +3,7 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Ecust-MMAI Research Group # Website name
+title: Ecust-MMAI Research Group 多模态人工智能课题组 # Website name
 baseURL: 'https://example.com/' # Website URL
 
 ############################
