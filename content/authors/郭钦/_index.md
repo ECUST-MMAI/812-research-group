@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: PhD. Loyal listener of Jay Chou.
+role: PhD.
 
 # Organizations/Affiliations
 organizations:
