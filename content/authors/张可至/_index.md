@@ -56,7 +56,7 @@ social:
 email: 'y30220946@mail.ecust.edu.cn'
 
 user_groups:
-  - Master Students 硕士
+  - Graduates Students 毕业生
 
 enrollment_year: 2022
 ---

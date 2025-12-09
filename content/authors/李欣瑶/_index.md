@@ -1,14 +1,14 @@
 ---
 # Display name
-title: Huifang Wang 王汇芳
+title: Xinyao Li 李欣瑶
 
 # Full name (for SEO)
-first_name: Huifang
-last_name: Wang
+first_name: Xinyao
+last_name: Li
 
 # Username (this should match the folder name)
 authors:
-  - 王汇芳
+  - 李欣瑶
 
 # Is this the primary user of the site?
 superuser: false
@@ -22,20 +22,19 @@ organizations:
     url: 'https://cise.ecust.edu.cn/7684/list.htm'
 
 # Short bio (displayed in user profile at end of posts)
-bio: A Master student of this laboratory, research interests include Artificial Intelligence, Medical Lesion Recognition and Medical Image Segmentation.
+bio: A Master student of this laboratory, research interests include Artificial Intelligence and Deep Learning.
 interests:
+  - Deep learning
   - Artificial Intelligence
-  - Medical Lesion Recognition
-  - Medical Image Segmentation
 
 education:
   courses:
     - course: Master of Engineering
       institution: East China University of Science and Technology
-      year: 2025
+      year: 2027
     - course: Bachelor of Engineering
-      institution: East China University of Science and Technology
-      year: 2022
+      institution: Nantong University
+      year: 2024
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -44,7 +43,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:2256175795@qq.com'
+    link: 'mailto:Y80240039@mail.ecust.edu.cn'
     
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -53,14 +52,14 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: '2256175795@qq.com'
+email: 'Y80240039@mail.ecust.edu.cn'
 
 user_groups:
-  - Graduates Students 毕业生
+  - Master Students 硕士
 
-enrollment_year: 2022
+enrollment_year: 2024
 ---
 
-Huifang Wang is a postgraduate student majoring in Communication and Information Engineering at East China University of Science and Technology. Her research interests include Artificial Intelligence, Medical Lesion Recognition and Medical Image Segmentation. 
+Xinyao Li was born in Nanyang City, Henan Province. She graduated from Nantong University as an Outstanding Graduate in 2024 with a bachelor's degree. Currently, she is pursuing a master's degree at East China University of Science and Technology. 
 
-She loves reading and calligraphy.
+Her research interests include deep learning and artificial intelligence, among others. In her spare time, she enjoys watching TV series and listening to music.
