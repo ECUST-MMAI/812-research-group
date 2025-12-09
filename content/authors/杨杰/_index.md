@@ -55,7 +55,7 @@ social:
 email: 'y80240014@mail.ecust.edu.cn'
 
 user_groups:
-  - Master Students 硕士
+  - Master Students 硕士生
   
 enrollment_year: 2024
 ---

@@ -56,7 +56,7 @@ social:
 email: '3105850359@qq.com'
 
 user_groups:
-  - Master Students 硕士
+  - Master Students 硕士生
 
 enrollment_year: 2024
 ---

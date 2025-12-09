@@ -57,7 +57,7 @@ social:
 email: 'Shawn.xiao@mail.ecust.edu.cn'
 
 user_groups:
-  - Doctoral Students 博士
+  - Doctoral Students 博士生
 
 enrollment_year: 2023
 ---

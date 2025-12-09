@@ -65,7 +65,7 @@ social:
 email: 'lytong_ecust@163.com'
 
 user_groups:
-  - Doctoral Students 博士
+  - Doctoral Students 博士生
 
 enrollment_year: 2021
 ---
