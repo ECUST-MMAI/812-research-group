@@ -1,14 +1,14 @@
 ---
 # Display name
-title: Yunjie Jiang 蒋昀捷
+title: Ming Zhang 张铭
 
 # Full name (for SEO)
-first_name: Yunjie
-last_name: Jiang
+first_name: Ming
+last_name: Zhang
 
 # Username (this should match the folder name)
 authors:
-  - 蒋昀捷
+  - 张铭
 
 # Is this the primary user of the site?
 superuser: false
@@ -22,11 +22,10 @@ organizations:
     url: 'https://cise.ecust.edu.cn/7684/list.htm'
 
 # Short bio (displayed in user profile at end of posts)
-bio: A Master student of this laboratory, research interests include Radiology report generation, Large language model and Deep Learning.
+bio: A Master student of this laboratory, research interests include Artificial Intelligence and Medical multimodality.
 interests:
   - Deep learning
-  - Radiology report generation
-  - Large language model
+  - Medical multimodality
 
 education:
   courses:
@@ -44,7 +43,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:y30251004@mail.ecust.edu.cn'
+    link: 'mailto:1552557630@qq.com'
     
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -53,7 +52,7 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: 'y30251004@mail.ecust.edu.cn'
+email: '1552557630@qq.com'
 
 user_groups:
   - Master Students 硕士生
@@ -61,6 +60,6 @@ user_groups:
 enrollment_year: 2025
 ---
 
-Yunjie Jiang was born in Shanghai, China, in 2002. He received his Bachelor's degree from East China University of Science and Technology and is currently pursuing a Master's degree at the same university. His research interests include computer vision, deep learning, radiology report generation, and medical image segmentation with large language model.
+Ming Zhang was born in Hebei, China in 2003. He graduated from East China University of Science and Technology and is currently pursuing a master's degree at the same institution. His research interests include deep learning-based medical multimodality and medical image segmentation.
 
-In his spare time, he enjoys playing video games.
+His hobbies are photography, music, and video games.

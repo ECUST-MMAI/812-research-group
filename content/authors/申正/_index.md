@@ -58,7 +58,7 @@ email: 'y30251003@mail.ecust.edu.cn'
 user_groups:
   - Master Students 硕士生
 
-enrollment_year: 2024
+enrollment_year: 2025
 ---
 
 Zheng Shen was born in Shandong Province, China, in 2003. He completed his bachelor's degree at East China University of Science and Technology and is currently pursuing his master’s degree at the same university. His research interests include computer vision, deep learning, and 3D object detection methods for fusing 4D radar and images in autonomous driving.
