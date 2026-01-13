@@ -1,0 +1,22 @@
+name: Sync GitHub to Gitee
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 拉取完整历史
+
+      - name: Push to Gitee
+        uses: wearerequired/git-mirror-action@v1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+        with:
+          source-repo: git@github.com:ecust-mmai/812-research-group.git
+          destination-repo: git@gitee.com:ecust-mmai/812-research-group.git
