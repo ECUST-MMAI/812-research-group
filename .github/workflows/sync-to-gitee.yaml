@@ -18,9 +18,9 @@ jobs:
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           
-      - name: Push to Gitee
+      - name: Push to Gitee (Correct Token Format)
         env:
           GITEE_ACCESS_TOKEN: ${{ secrets.GITEE_ACCESS_TOKEN }}
         run: |
-          # 直接使用HTTPS URL包含访问令牌
-          git push -f https://ecust-mmai:${{ secrets.GITEE_ACCESS_TOKEN }}@gitee.com/ecust-mmai/812-research-group.git main:main
+          # 对于Gitee，使用oauth2作为用户名的令牌认证格式
+          git push -f https://oauth2:${{ secrets.GITEE_ACCESS_TOKEN }}@gitee.com/ecust-mmai/812-research-group.git main:main
