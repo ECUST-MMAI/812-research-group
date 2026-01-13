@@ -5,7 +5,8 @@
 
 title: Ecust-MMAI Lab     # Website name
       
-baseURL: 'https://example.com/' # Website URL
+# baseURL: 'https://example.com/' # Website URL
+baseURL: 'https://ecust-mmai.github.io/812-research-group/'
 
 ############################
 ## LANGUAGE
