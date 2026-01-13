@@ -12,11 +12,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # 拉取完整历史
-
+          
+      - name: Trust Workspace Directory
+        run: git config --global --add safe.directory /github/workspace
+        
+      - name: Setup SSH for Gitee
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.GITEE_RSA_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H gitee.com >> ~/.ssh/known_hosts
+          
+      - name: Add Gitee Remote
+        run: git remote add gitee git@gitee.com:ecust-mmai/812-research-group.git
+        
       - name: Push to Gitee
-        uses: wearerequired/git-mirror-action@v1
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
-        with:
-          source-repo: git@github.com:ecust-mmai/812-research-group.git
-          destination-repo: git@gitee.com:ecust-mmai/812-research-group.git
+        run: git push -f gitee main:main
