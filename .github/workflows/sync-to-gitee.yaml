@@ -19,32 +19,43 @@ jobs:
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           
-      - name: Debug SSH Configuration
+      - name: Check Git Configuration
         run: |
-          echo "Checking SSH directory..."
-          ls -la ~/.ssh
           echo "Checking Git configuration..."
           git config --list
           
-      - name: Setup SSH for Gitee
+      - name: Setup SSH Environment
         run: |
+          # 确保SSH目录存在
           mkdir -p ~/.ssh
+          echo "SSH directory created successfully"
+          ls -la ~/.ssh
+          
+      - name: Configure SSH for Gitee
+        run: |
           # 确保密钥格式正确（处理可能的换行符问题）
           echo "${{ secrets.GITEE_RSA_PRIVATE_KEY }}" | sed 's/\\n/\n/g' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          
           # 添加Gitee到已知主机
           ssh-keyscan -H gitee.com >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
-          # 测试SSH连接
+          
+          echo "SSH configuration completed"
+          ls -la ~/.ssh
+          
+      - name: Test SSH Connection (Optional)
+        run: |
           echo "Testing SSH connection to Gitee..."
-          ssh -T git@gitee.com || echo "SSH connection test completed (expected error if first connection)"
+          # 测试连接，即使失败也继续执行
+          ssh -T git@gitee.com || echo "SSH connection test completed (non-zero exit code is expected for first connection)"
           
       - name: Add Gitee Remote
         run: |
           git remote add gitee git@gitee.com:ecust-mmai/812-research-group.git
           git remote -v  # 验证远程仓库设置
           
-      - name: Push to Gitee with SSH
+      - name: Push to Gitee
         run: |
           echo "Pushing to Gitee..."
           git push -f gitee main:main
@@ -52,8 +63,9 @@ jobs:
       - name: Fallback to HTTPS if SSH fails
         if: failure()
         run: |
-          echo "SSH push failed, trying HTTPS..."
+          echo "SSH push failed, trying HTTPS as fallback..."
           git remote remove gitee
-          # 使用用户名和访问令牌的HTTPS方式
+          
+          # 使用Gitee访问令牌的HTTPS方式（需要在GitHub Secrets中添加GITEE_ACCESS_TOKEN）
           git remote add gitee https://ecust-mmai:${{ secrets.GITEE_ACCESS_TOKEN }}@gitee.com/ecust-mmai/812-research-group.git
           git push -f gitee main:main
