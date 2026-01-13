@@ -24,31 +24,53 @@ jobs:
           git config --global http.lowSpeedLimit 0
           git config --global http.lowSpeedTime 999999
           git config --global core.compression 9
+          # 配置Gitee IP地址，避免DNS解析问题
+          git config --global url."https://gitee.com/".insteadOf "https://180.76.198.77/"
           
-      - name: Network Test
+      - name: Optional Network Test (Allowed to Fail)
+        continue-on-error: true
         run: |
-          echo "Testing network connectivity..."
-          ping -c 3 gitee.com
-          echo "Checking Gitee SSH port..."
-          nc -zv gitee.com 22
-          echo "Checking Gitee HTTPS port..."
-          nc -zv gitee.com 443
+          echo "Testing network connectivity (this might fail but that's okay)..."
+          # 尝试多种网络测试方法
+          curl -I --connect-timeout 5 https://gitee.com || echo "curl failed, but continuing..."
+          nslookup gitee.com || echo "nslookup failed, but continuing..."
           
-      - name: Push to Gitee with Debug Info
-        timeout-minutes: 5  # 单个步骤超时设置
+      - name: Push to Gitee with Retry
+        timeout-minutes: 8  # 单个步骤超时设置
         env:
           GITEE_ACCESS_TOKEN: ${{ secrets.GITEE_ACCESS_TOKEN }}
         run: |
-          echo "Starting Gitee push..."
-          # 启用Git详细日志
-          export GIT_CURL_VERBOSE=1
-          export GIT_TRACE=1
+          echo "Starting Gitee push with retry mechanism..."
           
-          # 测试远程连接
-          git ls-remote https://oauth2:${{ secrets.GITEE_ACCESS_TOKEN }}@gitee.com/ecust-mmai/812-research-group.git
+          # 重试函数
+          retry_push() {
+            local retries=3
+            local count=0
+            local delay=5
+            
+            while [ $count -lt $retries ]; do
+              echo "Attempt $((count + 1)) of $retries..."
+              
+              # 简化推送命令，减少可能的问题点
+              git push -f "https://oauth2:${{ secrets.GITEE_ACCESS_TOKEN }}@gitee.com/ecust-mmai/812-research-group.git" main:main
+              
+              if [ $? -eq 0 ]; then
+                echo "Push successful!"
+                return 0
+              fi
+              
+              echo "Push failed, retrying in $delay seconds..."
+              sleep $delay
+              count=$((count + 1))
+              delay=$((delay * 2))  # 指数退避
+            done
+            
+            echo "All push attempts failed!"
+            return 1
+          }
           
-          # 使用--progress显示进度，--verbose显示详细信息
-          git push --verbose --progress -f https://oauth2:${{ secrets.GITEE_ACCESS_TOKEN }}@gitee.com/ecust-mmai/812-research-group.git main:main
+          # 执行重试推送
+          retry_push
           
       - name: Verify Sync Success
         if: ${{ success() }}
