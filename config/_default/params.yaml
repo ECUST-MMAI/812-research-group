@@ -116,3 +116,9 @@ extensions:
 publications:
   date_format: January 2006
   citation_style: apa
+
+# Cloudflare Optimization
+cdn:
+  enable: true
+  provider: cloudflare
+  cdn_url: https://ecust-mmai.github.io/812-research-group/
