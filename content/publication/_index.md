@@ -1,5 +1,5 @@
 ---
-title: Publications 成果
+title: Latest Publications 最新成果
 
 # Listing view
 view: citation

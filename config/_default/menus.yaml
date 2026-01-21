@@ -10,13 +10,13 @@ main:
   - name: News 新闻
     url: post
     weight: 20
-  - name: People 成员
+  - name: Members 成员
     url: people
     weight: 30
 #  - name: Events
 #    url: event
 #    weight: 40
-  - name: Publications 成果
+  - name: Latest Pub. 最新成果
     url: publication
     weight: 50
   - name: Contact 联系我们

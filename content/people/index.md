@@ -7,7 +7,7 @@ type: landing
 sections:
   - block: people
     content:
-      title: Our Team 团队介绍
+      title: Team Members 团队成员
       # Choose which groups/teams of users to display.
       #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
       user_groups:
