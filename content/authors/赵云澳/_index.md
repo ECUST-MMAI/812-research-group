@@ -57,7 +57,7 @@ social:
 email: 'zhaoyunao01@163.com'
 
 user_groups:
-  - Master's Students 硕士生
+  - Master Students 硕士生
 
 enrollment_year: 2023
 ---
