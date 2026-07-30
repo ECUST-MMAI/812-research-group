@@ -63,7 +63,7 @@ social:
 email: '18616224629@163.com'
 
 user_groups:
-  - Master Students 硕士生
+  - Graduates Students 毕业生
 
 enrollment_year: 2023
 ---
